@@ -11,9 +11,19 @@ export default function Movie(props) {
             <h1>{context.title}</h1>
               <div className="movieImage">
                 <img src={context.backdrop_path} alt={context.title} style={{
-                                width: "85vw",
-                                height: "50vh"
+                                width: "65vw",
+                                height: "50vh",
+                                borderRadius: "25px",
+                                margin: "0% 8%" 
                             }}/>
+            </div>
+            <div className="revRate">
+              <Link to="/Reviews">
+                <button onClick={context.handleClickReview}>
+                  Reviews ⭐⭐⭐ Ratings
+                </button>
+              </Link>
+              <br></br>
             </div>
             <div className="movieOverview">
               <h1>
@@ -28,14 +38,6 @@ export default function Movie(props) {
             </div>
             <br></br>
             <div>
-            <div className="revRate">
-              <Link to="/Reviews">
-                <button onClick={context.handleClickReview}>
-                  Reviews ⭐⭐⭐ Ratings
-                </button>
-              </Link>
-              <br></br>
-            </div>
             </div>
           </div>
         );

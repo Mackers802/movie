@@ -15,8 +15,13 @@ export default function reviews(props) {
               <br></br>
               <div className="revImg">
               <Link to="/Movie">
-              <img src={context.backdrop_path} alt={context.title} style={{width: "85vw",
-                        height: "50vh"}}></img>
+              <img src={context.backdrop_path} alt={context.title} style={{
+                                width: "65vw",
+                                height: "50vh",
+                                borderRadius: "25px",
+                                margin: "0% 8%" 
+                        }}
+                        ></img>
                             </Link>
               </div>
               <p>Click image for {context.title} discription page</p>
@@ -30,7 +35,6 @@ export default function reviews(props) {
             <div className="writtenReviews">
                     {context.reviews.map(review => <Review review = {review} />)}
                 </div>
-            {/* <Reviews /> */}
           <br></br>
           </div>
         );

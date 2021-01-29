@@ -12,8 +12,10 @@ export default function Home(props){
                         <div className="imageHome">
                             <Link to="/Movie">
                             <img src={context.backdrop_path} alt={context.title} style={{
-                                width: "85vw",
-                                height: "50vh"
+                                width: "65vw",
+                                height: "50vh",
+                                borderRadius: "25px",
+                                margin: "0% 8%" 
                             }}/>
                             </Link>
                             <p>Click image see more info about {context.title}</p>

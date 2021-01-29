@@ -13,11 +13,17 @@ export default function Nav() {
         <div className="dropdown">
           <button className="dropbtn">🍿</button>
           <div className="dropdown-content">
-            <Link to="/"> 🎞️ </Link>
-            <hr></hr>
-            <Link to="/Movie"> 📺  </Link>
-            <hr></hr>
-            <Link to="/Reviews"> ⭐⭐⭐ </Link>
+            <div>
+              <Link to="/"> Home </Link>
+            </div>
+            <br></br>
+            <div>
+              <Link to="/Movie"> Movie Info  </Link>
+            </div>
+            <br></br>
+            <div>
+              <Link to="/Reviews"> Reviews </Link>
+            </div>
           </div>
         </div>
         </div>
