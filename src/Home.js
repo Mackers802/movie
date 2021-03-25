@@ -7,16 +7,18 @@ export default function Home(props){
         <Consumer>
             {(context) => {
                 return(
-                    <div className="containerHome">
+                    <div id="containerHome">
                         <h1>{context.title}</h1>
-                        <div className="imageHome">
+                        {/* <div className="imageHome"> */}
                             <Link to="/Movie">
-                            <img src={context.backdrop_path} alt={context.title} style={{
-                                width: "65vw",
-                                height: "50vh",
-                                borderRadius: "25px",
-                                margin: "0% 8%" 
-                            }}/>
+                            <img src={context.backdrop_path} alt={context.title} 
+                            // style={{
+                                // width: "65vw",
+                                // height: "50vh",
+                                // borderRadius: "25px",
+                                // margin: "0% 8%" 
+                            // }}
+                            />
                             </Link>
                             <p>Click image see more info about {context.title}</p>
                         <button onClick={context.handleClickChooseNewMovie}>Shuffle Movie</button>
@@ -28,7 +30,7 @@ export default function Home(props){
                         <div className="emoji">
                             🥨 🍿 🍫 🍭 🍬 🥤 🍺 🥂 🍼
                         </div>
-                        </div>
+                        {/* </div> */}
                     </div>
                 )
             }}

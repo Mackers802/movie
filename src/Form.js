@@ -5,8 +5,8 @@ export default function Form(props) {
     <Consumer>
       {(context) => {
         return (
-          <div>
-          <form className="formContainer">
+          <div className="formRate">
+            <form className="formContainer">
               <div className="radioButtons">
                 <div>
                   <label>
@@ -71,7 +71,7 @@ export default function Form(props) {
               </div>
               <div>
                 <label>
-                  <input 
+                  <input
                     type="text"
                     placeholder="Your first Name"
                     maxlength="15"
@@ -81,7 +81,7 @@ export default function Form(props) {
                   />
                 </label>
                 <label>
-                  <input 
+                  <input
                     type="text"
                     maxlength="50"
                     placeholder="Write a review"
@@ -91,11 +91,17 @@ export default function Form(props) {
                   />
                 </label>
               </div>
-              <button onClick= {(e) => {context.submitReview(e)}}>Submit Movie Rating</button>
+              <button
+                onClick={(e) => {
+                  context.submitReview(e);
+                }}
+              >
+                Submit Movie Rating
+              </button>
             </form>
           </div>
         );
       }}
-</Consumer>
-);
+    </Consumer>
+  );
 }

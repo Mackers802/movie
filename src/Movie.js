@@ -9,25 +9,19 @@ export default function Movie(props) {
         return (
           <div className="movieContainer">
             <h1>{context.title}</h1>
-              <div className="movieImage">
-                <img src={context.backdrop_path} alt={context.title} style={{
-                                width: "65vw",
-                                height: "50vh",
-                                borderRadius: "25px",
-                                margin: "0% 8%" 
-                            }}/>
+              <div id="movieImage">
+                <img src={context.backdrop_path} alt={context.title}/>
             </div>
-            <div className="revRate">
+            <div id="rating">
               <Link to="/Reviews">
                 <button onClick={context.handleClickReview}>
-                  Reviews ⭐⭐⭐ Ratings
+                  Reviews
                 </button>
               </Link>
-              <br></br>
             </div>
             <div className="movieOverview">
               <h1>
-                What this move is about:
+                Movie Description
               </h1>
               <p>
                 {context.overview}

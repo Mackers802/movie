@@ -12,30 +12,18 @@ export default function reviews(props) {
       {(context) => {
         return (
           <div className="reviewContainer">
-              <br></br>
               <div className="revImg">
-              <Link to="/Movie">
-              <img src={context.backdrop_path} alt={context.title} style={{
-                                width: "65vw",
-                                height: "50vh",
-                                borderRadius: "25px",
-                                margin: "0% 8%" 
-                        }}
-                        ></img>
-                            </Link>
+                <Link to="/Movie">
+                  <img src={context.backdrop_path} alt={context.title}></img>
+                </Link>
               </div>
-              <p>Click image for {context.title} discription page</p>
-            <h1>Tell me what you thought about
-            <br></br>
-             {context.title}</h1>
-            <div className="formRate">
+            <p>Click image for {context.title} discription page</p>
+            <h1>Tell me what you thought about {context.title}</h1>
               <Form />
-            </div>
                 <h1>Previous Ratings</h1>
             <div className="writtenReviews">
                     {context.reviews.map(review => <Review review = {review} />)}
                 </div>
-          <br></br>
           </div>
         );
       }}
